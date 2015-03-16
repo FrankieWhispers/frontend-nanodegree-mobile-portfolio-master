@@ -36,6 +36,27 @@ To optimize views/pizza.html, you will need to modify views/js/main.js until you
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
+////My Optimizations////////////////////////////////////
+Web Page Optimizer:
+-Compressed png and jpg images using online compression tool to keep original dimensions of pictures.
+ http://jpeg-optimizer.com/
+ http://compresspng.com/
+-Commented out href to eliminate online fonts that was causing an average of 18ms of loading.
+-Inline style.css in index.html.
+-Added media=”print” to href of print.css.
+-Added async to googleAnalyticObject src.
+-Added missing </div> to line 120 of index.html
+Pizzeria:
+-Compressed png and jpg images using online compression tool to keep original dimensions of pictures.
+-http://jpeg-optimizer.com/
+-http://compresspng.com/
+-Corrected noise to noisy for getadj.
+-Created pizzaVar to only have to call querySelectorAll once in changePizzaSizes function. Moved lines out of for loop that   only needed one call to configure variables for calculations for changePizzaSizes function.
+-Created scrollVar in updatePositions function to remove document.body.scrollTop from for loop.
+-Changed the number off pizzas from 200 to 31 to reduce the number of pizza elements. (256/8columns) -1.
+-Tried to create a sin table to stop calling the math.sin function but was unsuccessful because of the scroll variable being used inside of the math.sin function.
+///////////////////////////////////////////////////////////////////////
+
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
 * [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")

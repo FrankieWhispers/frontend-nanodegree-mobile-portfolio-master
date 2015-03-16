@@ -47,6 +47,7 @@ Web Page Optimizer:
 -Added media=”print” to href of print.css.
 -Added async to googleAnalyticObject src.
 -Added missing </div> to line 120 of index.html
+
 Pizzeria:
 -Compressed png and jpg images using online compression tool to keep original dimensions of pictures.
 -http://jpeg-optimizer.com/
